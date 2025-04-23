@@ -1,1 +1,62 @@
+# Slack Genie HTTP
+
+A minimal HTTP-based Slack bot built with **FastAPI** to interact with Databricks Genie API. The app listens for Slack Events API. Forwards them to Databricks GEnie API via Fast API and returns the response. FastAPI brokers the communication to and from Slack and Genie API.
+
+
+## Features
+- Slack Events Handler
+- Fast API backend (async support)
+- Integration with Databricks Genie endpoint
+- Compatible with local development and Cloud Deployment (in this case, tested with Heroku)
+
+---
+## Getting Started: Local
+### 1. Clone the repo
+```
+git clone https://github.com/smakubi/slack-genie-http.git
+cd slack-genie-http
+```
+
+### 2. Create a .env file
+```
+DATABRICKS_HOST=
+DATABRICKS_TOKEN=
+FORMAT_TABLES=true
+MAINTAIN_CONTEXT=true
+MAX_RETRIES=10
+RETRY_INTERVAL=5
+SLACK_BOT_TOKEN=
+SLACK_CHANNEL_ID=
+SLACK_SIGNING_SECRET=
+SPACE_ID=
+ENV=production
+```
+Do not commit .env to source control.
+
+### 3. Create and Activate Virtual Environment
+```
+python -m venv myenv
+source myenv/bin/activate
+```
+### 4. Install dependencies
+```
+pip install -r requirements.txt
+```
+
+### 5. Run locally
+```
+uvicorn app:app --reload
+```
+This starts the FastAPI server on http://localhost:8000.
+
+### 6. Test with ngrok (for Slack)
+If you don't have ngrok. Install and create an account ([https://ngrok.com/](https://dashboard.ngrok.com/get-started/setup/macos)).
+Now open another terminal and run ngrok:
+```
+ngrok http 8000
+```
+This will give you a forwarding URL. Then Update your Slack app to point the callback URL to your ngrok forwarding URL.
+
+
+
 
