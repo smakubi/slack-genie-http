@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+httpx
+python-dotenv
+slack-bolt
+aiohttp
+requests
+pandas
+databricks-sdk
