@@ -108,4 +108,36 @@ Deploy to Heroku:
 git push heroku main
 ```
 
+Set secrets and configs with:
+```
+heroku config:set DATABRICKS_HOST=https://example.databricks.com/ \
+DATABRICKS_TOKEN=your-databricks-token \
+FORMAT_TABLES=true \
+MAINTAIN_CONTEXT=true \
+MAX_RETRIES=10 \
+RETRY_INTERVAL=5 \
+SLACK_BOT_TOKEN=xoxb-.......... \
+SLACK_CHANNEL_ID=slack-channel-id \
+SLACK_SIGNING_SECRET=your-slack-bot-signing-secret \
+SPACE_ID=your-genie-space0id \
+ENV=production
+```
+
+Now check that configs are set with:
+```
+heroku config
+```
+
+Your fastapi app should now be running.
+Check to see the routes:
+```
+https://your-heroku-fastapi-app-url.com/docs
+```
+Make note of the /slack/events endpoint:
+```
+https://your-heroku-fastapi-app-url.com/api/v1/slack/events
+```
+Go ahead and update your slack app request URL to use the above endpoint. So that slack can events to your app.
+
+
 
