@@ -57,6 +57,28 @@ ngrok http 8000
 ```
 This will give you a forwarding URL. Then Update your Slack app to point the callback URL to your ngrok forwarding URL.
 
+---
+## Getting Started: Cloud (Heroku)
+Make sure you are in the directory.
+### 1. Install Heroku CLI
+Here's the link: https://devcenter.heroku.com/articles/heroku-cli
+
+In MacOS you can use Homebrew:
+```
+brew install heroku/brew/heroku
+```
+Ensure you've installed:
+```
+heroku --version
+```
+
+Log into Heroku:
+```
+heroku login
+```
+
+### 2. Create Heroku App
+
 
 
 
