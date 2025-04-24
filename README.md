@@ -140,4 +140,13 @@ https://your-heroku-fastapi-app-url.com/api/v1/slack/events
 Go ahead and update your slack app request URL to use the above endpoint. So that slack can events to your app.
 
 
+---
+## Slack App
+### 1. Create Slack App
+- Go to https://api.slack.com/apps
+- Click “Create New App”
+- Choose “From an app manifest”
+- Select your workspace
+- Paste your manifest.yaml contents into the form
+- Click “Next” → Review → Create
 
