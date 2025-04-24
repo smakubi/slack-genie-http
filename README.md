@@ -92,11 +92,20 @@ heroku login
 ```
 heroku create your-fastapi-app
 ```
-Add files to and commit to Heroku
+Add files to and commit to Heroku:
 ```
 git add .
 git commit -m "initial heroku commit"
 ```
 
+Connect to Heroku:
+```
+heroku git:remote -a your-fastapi-app
+```
+
+Deploy to Heroku:
+```
+git push heroku main
+```
 
 
