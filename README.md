@@ -50,7 +50,18 @@ uvicorn app:app --reload
 This starts the FastAPI server on http://localhost:8000.
 
 ### 6. Test with ngrok (for Slack)
-If you don't have ngrok. Install and create an account ([https://ngrok.com/](https://dashboard.ngrok.com/get-started/setup/macos)).
+If you don't have ngrok. Install and create an account and add your authtoken to the default ngrok.yml configuration file.
+ ([https://ngrok.com/](https://dashboard.ngrok.com/get-started/setup/macos)). 
+
+ Install:
+ ```
+brew install ngrok
+```
+
+Adding Authtoken (this is one time only operation):
+```
+ngrok config add-authtoken your-auth-token
+```
 Now open another terminal and run ngrok:
 ```
 ngrok http 8000
