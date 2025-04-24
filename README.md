@@ -9,8 +9,11 @@ A minimal HTTP-based Slack bot built with **FastAPI** to interact with Databrick
 - Integration with Databricks Genie endpoint
 - Compatible with local development and Cloud Deployment (in this case, tested with Heroku)
 
+# Getting Started
 ---
-## Getting Started: Local
+## Local Deployment for Testing
+Start with local and make sure it runs ok. This is just for testing.
+
 ### 1. Clone the repo
 ```
 git clone https://github.com/smakubi/slack-genie-http.git
@@ -69,8 +72,8 @@ ngrok http 8000
 This will give you a forwarding URL. Then Update your Slack app to point the callback URL to your ngrok forwarding URL.
 
 ---
-## Getting Started: Cloud (Heroku)
-Make sure you are in the directory.
+## Cloud Deployment (Heroku) for Production
+This is for production. Make sure you are in the project directory.
 ### 1. Install Heroku CLI
 Here's the link: https://devcenter.heroku.com/articles/heroku-cli
 
