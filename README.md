@@ -1,6 +1,6 @@
 # Slack Genie HTTP
 
-A minimal HTTP-based Slack bot built with **FastAPI** to interact with Databricks Genie API. The app listens for Slack Events API. Forwards them to Databricks GEnie API via Fast API and returns the response. FastAPI brokers the communication to and from Slack and Genie API.
+A minimal HTTP-based Slack bolt implementation built with **FastAPI** to interact with Databricks Genie API. The app listens for Slack Events API. Forwards them to Databricks Genie API via Fast API and returns the response. FastAPI brokers the communication to and from Slack and Genie API.
 
 
 ## Features
