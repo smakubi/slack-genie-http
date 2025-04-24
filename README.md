@@ -160,16 +160,16 @@ Go ahead and update your slack app request URL to use the above endpoint. So tha
 - Under OAuth Tokens click on "Install to <Your Workspace Name>
 - Optionally select a channel to install to and click Allow
 - This should generate:
-- - User OAuth Token: xoxp-..........
-- - Bot User OAuth Token: xoxb-.......
+-- User OAuth Token: xoxp-..........
+-- Bot User OAuth Token: xoxb-.......
 - Take note of the above.
 
 ### 4. Now update Secrets and Variables in .env and in Heroku env
 - Open .env
 - Add:
-- - SLACK_BOT_TOKEN (Slack Bot User OAuth Token) from above. It should start with xoxb-
-- - SLACK_CHANNEL_ID: Default channel ID you added above
-- - SLACK_SIGNING_SECRET: On the main app page. Click on "Basic Information". Under "Signing Secret" click "Show". Copy Signing Secret.
+-- SLACK_BOT_TOKEN (Slack Bot User OAuth Token) from above (xoxb NOT xoxp). It should start with xoxb-
+-- SLACK_CHANNEL_ID: Default channel ID you added above
+-- SLACK_SIGNING_SECRET: On the main app page. Click on "Basic Information". Under "Signing Secret" click "Show". Copy Signing Secret.
 
 - Next Update these configs on Slack Env too with:
 ```
