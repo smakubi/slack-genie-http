@@ -89,7 +89,9 @@ heroku login
 ```
 
 ### 2. Create Heroku App
-
+```
+heroku create your-fastapi-app
+```
 
 
 
