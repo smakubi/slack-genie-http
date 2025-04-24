@@ -171,7 +171,8 @@ Go ahead and update your slack app request URL to use the above endpoint. So tha
 - Add:
 ```
    SLACK_BOT_TOKEN (Slack Bot User OAuth Token) from above (xoxb NOT xoxp). It should start with xoxb-
-   SLACK_CHANNEL_ID: Default channel ID you added above SLACK_SIGNING_SECRET: On the main app page. Click on "Basic Information". Under "Signing Secret" click "Show". Copy Signing Secret.
+   SLACK_CHANNEL_ID: Default channel ID you added above 
+   SLACK_SIGNING_SECRET: On the main app page. Click on "Basic Information". Under "Signing Secret" click "Show". Copy Signing Secret.
 ```
 
 - Next Update these configs on Slack Env too with:
