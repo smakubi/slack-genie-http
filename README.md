@@ -150,3 +150,32 @@ Go ahead and update your slack app request URL to use the above endpoint. So tha
 - Paste your manifest.yaml contents into the form
 - Click “Next” → Review → Create
 
+### 2. Update Slack Request URL
+- Go back to: https://api.slack.com/apps/. Select the app you created "GENIE"
+- Click Event Subscriptions and update the Request URL with your slack/events endpoint URL from earlier (ie: https://your-heroku-fastapi-app-url.com/api/v1/slack/events for Heroku) or (your-ngrok-url.com/api/v1/slack/events for Local)
+- Save Changes.
+
+### 3. Add Slack App to Your Workspace
+- On the app page select "OAuth & Permissions"
+- Under OAuth Tokens click on "Install to <Your Workspace Name>
+- Optionally select a channel to install to and click Allow
+- This should generate:
+- - User OAuth Token: xoxp-..........
+- - Bot User OAuth Token: xoxb-.......
+- Take note of the above.
+
+### 4. Now update Secrets and Variables in .env and in Heroku env
+- Open .env
+- Add:
+- - SLACK_BOT_TOKEN (Slack Bot User OAuth Token) from above. It should start with xoxb-
+- - SLACK_CHANNEL_ID: Default channel ID you added above
+- - SLACK_SIGNING_SECRET: On the main app page. Click on "Basic Information". Under "Signing Secret" click "Show". Copy Signing Secret.
+
+- Next Update these configs on Slack Env too with:
+```
+heroku config:set SLACK_BOT_TOKEN=xoxb-.......... \
+SLACK_CHANNEL_ID=slack-channel-id \
+SLACK_SIGNING_SECRET=your-slack-bot-signing-secret \
+```
+
+If prompted re-install your app.

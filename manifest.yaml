@@ -1,8 +1,11 @@
+_metadata:
+  major_version: 2
+  minor_version: 1
 display_information:
   name: GENIE
   description: genie conversation api
   background_color: "#000000"
-  long_description: Turn natural language questions to insights with Databricks Genie API. Ask Questions, Get Answers!
+  long_description: This Slack App will transform natural language into data insights effortlessly using the Databricks Genie API. Just ask a question, and Genie translates it into powerful answers—no SQL needed!
 features:
   app_home:
     home_tab_enabled: true
